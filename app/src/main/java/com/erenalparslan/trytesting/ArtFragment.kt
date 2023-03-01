@@ -25,4 +25,9 @@ class ArtFragment : Fragment(R.layout.fragment_art) {
         }
     }
 
+    override fun onDestroyView() {
+       artFragmentBinding=null
+        super.onDestroyView()
+    }
+
 }
