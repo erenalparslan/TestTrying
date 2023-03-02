@@ -7,11 +7,17 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
 import androidx.navigation.fragment.findNavController
+import com.bumptech.glide.RequestManager
 import com.erenalparslan.trytesting.R
 import com.erenalparslan.trytesting.databinding.FragmentArtDetailBinding
+import javax.inject.Inject
 
 
-class ArtDetailFragment : Fragment() {
+class ArtDetailFragment
+    @Inject
+    constructor(
+        private val glide :RequestManager)
+    : Fragment() {
     private var artDetailBinding: FragmentArtDetailBinding? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
