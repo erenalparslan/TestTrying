@@ -8,5 +8,5 @@ import com.erenalparslan.trytesting.model.Art
 
 @Database(entities = [Art::class], version = 1)
 abstract class ArtDatabase :RoomDatabase(){
-    abstract fun getDao() : ArtDao
+    abstract fun artDao() : ArtDao
 }

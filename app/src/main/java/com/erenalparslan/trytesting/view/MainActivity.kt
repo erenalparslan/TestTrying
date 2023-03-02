@@ -1,7 +1,8 @@
-package com.erenalparslan.trytesting
+package com.erenalparslan.trytesting.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.erenalparslan.trytesting.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

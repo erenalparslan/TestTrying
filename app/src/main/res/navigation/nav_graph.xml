@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/artFragment"
-        android:name="com.erenalparslan.trytesting.ArtFragment"
+        android:name="com.erenalparslan.trytesting.view.ArtFragment"
         android:label="fragment_art"
         tools:layout="@layout/fragment_art" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/artDetailFragment"
-        android:name="com.erenalparslan.trytesting.ArtDetailFragment"
+        android:name="com.erenalparslan.trytesting.view.ArtDetailFragment"
         android:label="fragment_art_detail"
         tools:layout="@layout/fragment_art_detail" >
         <action
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/apiFragment"
-        android:name="com.erenalparslan.trytesting.ApiFragment"
+        android:name="com.erenalparslan.trytesting.view.ApiFragment"
         android:label="fragment_api"
         tools:layout="@layout/fragment_api" />
 </navigation>
