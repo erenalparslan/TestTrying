@@ -55,10 +55,6 @@ class ArtViewModel
         repository.insertArt(art)
     }
 
-    fun getArt(){
-        repository.getArt()
-    }
-
     fun searchForImage(serachString: String){
         if(serachString.isEmpty()){
         return
