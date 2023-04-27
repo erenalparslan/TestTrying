@@ -33,7 +33,7 @@ You can also save your works to be stored on your device using the Room database
 - [Dagger](https://dagger.dev)
 - [Hilt](https://developer.android.com/training/dependency-injection/hilt-android)
 - [Glide](https://github.com/bumptech/glide)
-- [Espresso]([Glide](https://github.com/bumptech/glide)
+- [Glide](https://developer.android.com/training/testing/espresso)
 - [Truth](https://truth.dev)
 
 
