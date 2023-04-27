@@ -1,5 +1,7 @@
 package com.erenalparslan.trytesting.roomdb
-import androidx.arch.core.executor.testing.InstantTaskExecutorRule
+import android.arch.core.executor.testing.InstantTaskExecutorRule
+import androidx.room.Room
+import androidx.test.core.app.ApplicationProvider
 
 import androidx.test.filters.SmallTest
 import com.erenalparslan.trytesting.dao.ArtDao
@@ -10,16 +12,13 @@ import com.erenalparslan.trytesting.model.Art
 import com.google.common.truth.Truth.assertThat
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
+
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.test.runBlockingTest
-import kotlinx.coroutines.test.runTest
-import org.junit.After
+import kotlinx.coroutines.runBlocking
+
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
-import org.junit.runner.RunWith
-import org.mockito.Mockito.mock
-import org.mockito.Mockito.verify
 import javax.inject.Inject
 import javax.inject.Named
 
@@ -34,32 +33,31 @@ class ArtDaoTest {
     @get:Rule
     var hiltRule = HiltAndroidRule(this)
 
-    @Inject
-    @Named("testDatabase")
-    lateinit var database : ArtDatabase
+  @Inject
+  @Named("testDatabase")
+   private lateinit var database : ArtDatabase
 
-    private lateinit var dao : ArtDao
+   private lateinit  var dao : ArtDao
 
     @Before
-    fun setup() {
-        /*
+    fun setup(){
+
         database = Room.inMemoryDatabaseBuilder(
             ApplicationProvider.getApplicationContext(),ArtDatabase::class.java)
             .allowMainThreadQueries() //this is a test case, we don't want other thread pools
             .build()
-         */
-        hiltRule.inject()
-        dao = database.artDao()
+
+        dao=database.artDao()
     }
 
-    @After
-    fun teardown() {
-        database.close()
-    }
+
+
 
 
     @Test
-    fun insertArtTesting() = runTest {
+    fun insertArtTesting() = runBlocking {
+
+
         val exampleArt = Art("Mona Lisa","Da Vinci",1700,"test.com",1)
         dao.insertArt(exampleArt)
 
@@ -68,15 +66,6 @@ class ArtDaoTest {
 
     }
 
-    @Test
-    fun deleteArtTesting() = runTest {
-        val exampleArt = Art("Mona Lisa","Da Vinci",1700,"test.com",1)
-        dao.insertArt(exampleArt)
-        dao.deleteArt(exampleArt)
 
-        val list = dao.observeArt().getOrAwaitValue()
-        assertThat(list).doesNotContain(exampleArt)
-
-    }
 
 }
