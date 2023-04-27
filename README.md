@@ -44,7 +44,10 @@ You can also save your works to be stored on your device using the Room database
 
 
 ## Screenshots
-![list](https://user-images.githubusercontent.com/100201401/234915365-599d4955-55c4-425f-a597-cdee9dc81c10.png)
-![save](https://user-images.githubusercontent.com/100201401/234915420-6f3788a7-14e8-4c72-b781-e455efa33032.png)
-  </br>  </br>
-![web](https://user-images.githubusercontent.com/100201401/234915442-12656c8d-f7cb-4bf1-a6b0-553fa10c8643.png)
+
+![web-removebg-preview](https://user-images.githubusercontent.com/100201401/234916713-8ee2f6ab-c656-4ee6-968f-09f3b6f8d1a1.png)
+![save-removebg-preview](https://user-images.githubusercontent.com/100201401/234916731-3cc7d7d1-a28c-43bc-b315-9a538b4690ad.png)
+ </br></br>
+![list-removebg-preview](https://user-images.githubusercontent.com/100201401/234916742-ea361bc2-b0f7-497e-98a7-04052425f91f.png)
+
+
